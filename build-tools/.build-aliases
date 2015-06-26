@@ -1,2 +1,0 @@
-alias gradle='gradle-build.sh'
-alias mvn='mvn-build.sh'
