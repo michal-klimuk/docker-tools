@@ -18,7 +18,7 @@ EOF
 echo "$aliases" >> "$ALIASES_PATH"
 chmod +x "$ALIASES_PATH"
 
-cat ~/.bashrc | grep "$ALIASES_PATH" > /dev/null
+cat ~/.bashrc | grep ". $ALIASES_PATH" > /dev/null
 # adds aliases reference to .bashrc if it's not yet there
 if [ $? -eq 1 ]; then
   echo "# docker-related aliases" >> "$BASHRC_PATH"
