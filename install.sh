@@ -10,8 +10,8 @@ ALIASES_PATH=~/.docker-aliases
 read -d '' aliases <<- EOF
 alias gradle='gradle-build.sh'
 alias mvn='mvn-build.sh'
-alias drm='docker rm $(docker ps -aq)'
-alias drmi-dang='docker rmi $(docker images -q --filter "dangling=true")'
+alias drm='docker rm \$(docker ps -aq)'
+alias drmi-dang='docker rmi \$(docker images -q --filter "dangling=true")'
 EOF
 
 # save aliases to file
@@ -26,4 +26,4 @@ if [ $? -eq 1 ]; then
 fi
 
 # executes aliases to avoid shell reopening
-$ALIASES_PATH
+. "$ALIASES_PATH"
