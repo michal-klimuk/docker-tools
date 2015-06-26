@@ -26,4 +26,4 @@ if [ $? -eq 1 ]; then
 fi
 
 # executes aliases to avoid shell reopening
-$ALIASES_PATH
+. $ALIASES_PATH
