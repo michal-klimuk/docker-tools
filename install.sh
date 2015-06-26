@@ -3,8 +3,8 @@
 # copy build tools scripts
 sudo cp build-tools/*.sh /usr/local/bin
 
-BASHRC_PATH=~/.bashrc
-ALIASES_PATH=~/.docker-aliases
+BASHRC_PATH="~/.bashrc"
+ALIASES_PATH="~/.docker-aliases"
 
 # define aliases we want to create
 read -d '' aliases <<- EOF
@@ -22,7 +22,7 @@ cat ~/.bashrc | grep "$ALIASES_PATH" > /dev/null
 # adds aliases reference to .bashrc if it's not yet there
 if [ $? -eq 1 ]; then
   echo "# docker-related aliases" >> "$BASHRC_PATH"
-  echo "$ALIASES_PATH" >> "$BASHRC_PATH"
+  echo ". $ALIASES_PATH" >> "$BASHRC_PATH"
 fi
 
 # executes aliases to avoid shell reopening
