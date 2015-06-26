@@ -1,4 +1,0 @@
-alias gradle='gradle-build.sh'
-alias mvn='mvn-build.sh'
-alias drm='docker rm $(docker ps -aq)'
-alias drmi-dang='docker rmi $(docker images -q --filter "dangling=true")'
